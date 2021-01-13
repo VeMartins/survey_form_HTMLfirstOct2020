@@ -1,0 +1,202 @@
+
+
+html, body {
+	min-height: 100%;
+	margin: 0;
+	}
+
+
+
+	#survey-form {
+		height: 100%;
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: auto;
+		grid-template-areas: "header header"
+						 	 "detailsDiv detailsDiv"
+						 	 "dropdown dropdown" 
+						 	 "radio checkbox"
+						 	 "textArea textArea"
+						  	 "submBtn submBtn";
+
+	}
+	#header {
+		background-color: #99582a;
+		grid-area: header;
+		text-align: center;
+
+	}
+	.allDetails {
+		background-color: #6f1d1b;
+		color: #ffe6a7;
+		text-shadow: 2px 2px black;
+		grid-area: detailsDiv;
+		display: flex;
+		padding: 12px;
+		flex-direction: column ;
+		border: 2px solid black;
+
+	}
+	.nameDiv, .ageDiv, .emailDiv {
+		padding: 12px;
+	}
+
+	.detailsInput {
+		background-color: #ffe6a7;
+	}
+	
+	.dropdownDiv {
+		background-color: #99582a;
+		grid-area: dropdown;
+		padding: 0px 12px 70px 12px;
+		margin:0;
+
+		
+	}
+	.dropdownDiv p {
+		font-size: 1.2vw;
+		font-weight: bold;
+	}
+
+	#dropdown {
+		background-color: #ffe6a7;
+	}
+	.radiosDiv {
+		background-color: #ffe6a7;
+		grid-area: radio;
+
+	}
+	.radioLabel, .checkboxLabel {
+		display: block;
+		position: relative;
+		padding-left: 20px;
+		margin-bottom: 12px;
+		font-size: 1vw;
+		-webkit-user-select: none;
+  		-moz-user-select: none;
+  		-ms-user-select: none;
+		user-select: none ;
+	}
+	.radioLabel input, .checkboxLabel input {
+		position: absolute;
+		cursor: pointer;
+		opacity: 0;
+
+	}
+
+	
+	.checkmark {
+		position: absolute;
+		top: 0;
+		height: 15px;
+		width: 15px;
+		background-color: #bb9457;
+		margin-left: 4px;
+		border: 2px solid #99582a;
+		
+	}
+	.checkmark2 {
+		position: absolute;
+		top: 0;
+		height: 15px;
+		width: 15px;
+		background-color: #ffe6a7;
+		margin-left: 4px;
+		border: 2px solid #99582a;
+	}
+	.radioLabel:hover input ~ .checkmark, .checkboxLabel:hover input ~ .checkmark2 {
+		background-color: #99582a;
+	}
+	.radioLabel input:checked ~ .checkmark, .checkboxLabel input:checked ~ .checkmark2 {
+		background-color: #99582a;
+		border: 2px solid #bb9457;
+	}
+	.checkmark:after, .checkmark2:after {
+		content: "";
+		position: absolute;
+		display: none;
+	}
+
+	.radioLabel input:checked ~ .checkmark:after, .checkboxLabel input:checked ~ .checkmark2:after {
+		display: block;
+	}
+	.radioLabel .checkmark:after {
+		top: 4px;
+		left: 4px;
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background: #ffe6a7;
+	}
+
+	.checkboxLabel .checkmark2:after {
+		top: 4px;
+		left: 4px;
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background: #ffe6a7;
+		border: red;
+		border-width: 0 2px 2px 0;
+	}
+
+
+	.checkboxDiv {
+		background-color: #bb9457;
+		grid-area: checkbox;
+	
+		
+	}
+	.checkboxLabel {
+		display: block;
+		position: relative;
+		padding-left: 20px;
+		margin-bottom: 12px;
+		font-size: 1vw;
+		-webkit-user-select: none;
+  		-moz-user-select: none;
+  		-ms-user-select: none;
+		user-select: none ;
+	}
+
+	.checkboxLabel input {
+		position: absolute;
+		cursor: pointer;
+	}
+	.selectParg {
+		padding-left: 20px;
+		font-size: 1.2vw;
+		font-weight: bold;
+	}
+	.newNames {
+		background: black;
+	}
+	.textareaDiv {
+		background-color: #99582a;
+		grid-area: textArea;
+		text-align: center;
+		padding: 0 12px 12px 12px;
+	}
+	.textareaDiv p {
+		font-size: 1.2vw;
+		font-weight: bold;
+	}
+	.frstChoice {
+		padding: 0;
+		height: 140px;
+		width: 500px;
+		background-color: #ffe6a7;
+	}
+	.submBtnDiv {
+		background-color: #bb9457;
+		grid-area: submBtn;
+		text-align: center;
+		padding: 12px;
+	}
+	.submitBtn {
+		background-color: #99582a;
+		color: #ffe6a7;
+		border:2px solid #6f1d1b;
+		padding: 10px;
+		font-size: 1.2vw;
+	}

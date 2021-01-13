@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Survey form</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	
+
+	<form id="survey-form" class="allValues">
+		<header id="header">	
+			<h1 id="title">The Scrumptious Chocolate Survey Form</h1>
+			<h2 id="description">Thank you for taking a moment to help us make our chocolates even more Scrumptious!</h2>
+		</header>
+
+		<div class="allDetails">
+				 <div class="nameDiv">
+					<label for="name" id="name-label">Name:</label>
+					<input type="text" name="name" id="name" class="detailsInput" placeholder="Enter your name" required>
+				 </div>
+
+				 <div class="ageDiv">
+					<label for="number" id="number-label">Age:</label>
+					<input type="number" name="age" id="number" class="detailsInput" placeholder=" Age" min="18" max="110" required>
+				 </div>
+
+				 <div class="emailDiv">
+					<label for="email" id="email-label">Email:</label>
+					<input type="email" name="email" id="email" class="detailsInput" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Enter your email" required>
+				 </div>
+
+				 
+
+		</div>
+
+		<div class="dropdownDiv">
+				<p>Please select your favourite Scrumptious chocolate:</p>
+				<select name="favChoc" id="dropdown" required>
+					<option disabled selected value>Select your favourite chocolate</option>
+					<option value="extreme">Scrumptious Extreme</option>
+					<option value="in_the_dark">Scrumptious In The Dark</option>
+					<option value="moonlight">Scrumptious Moonlight</option>
+					<option value="sunny">Scrumptious Sunny</option>
+				</select> 
+		</div>
+		<div class="radiosDiv">
+
+				<p class="selectParg">What should be the next Scrumptious chocolate flavour?</p>
+				<label class="radioLabel">Salty Caramel
+				<input type="radio" name="newFlavour" value="salty_caramel" class="newFlavours"><span class="checkmark"></span></label>
+
+				<label class="radioLabel">Triple Chocolate
+				<input type="radio" name="newFlavour" value="tripleChoc"class="newFlavours" ><span class="checkmark"></span></label>
+
+				<label class="radioLabel">Chilly
+				<input type="radio" name="newFlavour" value="chilly" class="newFlavours"><span class="checkmark"></span></label>
+				<label class="radioLabel">Passion Fruit
+				<input type="radio" name="newFlavour" value="passionFruit" class="newFlavours"><span class="checkmark"></span> </label>
+		</div>
+		<div class="checkboxDiv">
+				<p class="selectParg">What should be the next Scrumptious chocolate name?</p>
+				<label class="checkboxLabel">Fire In My Belly
+				<input type="checkbox" name="newName" value="fireInBelly" class="newNames"><span class="checkmark2"></span></label>
+				<label class="checkboxLabel">Meteor Shower
+				<input type="checkbox" name="newName" value="meteorShower" class="newNames"><span class="checkmark2"></span></label>
+				<label class="checkboxLabel">Prime Suspect
+				<input type="checkbox" name="newName" value="primeSuspect" class="newNames"><span class="checkmark2"></span></label>
+				<label class="checkboxLabel">Passiflora
+				<input type="checkbox" name="newName" value="passiflora" class="newNames"><span class="checkmark2"></span></label>
+		</div>
+		<div class="textareaDiv">
+				<p>Is Scrumptious Chocolate your first choice of chocolate? Please explain why. </p>
+				<textarea name="isYourFirstChoice" class="frstChoice" rows="5" cols="50" maxlength="240">
+					
+				</textarea>
+				
+		</div>
+		<div class="submBtnDiv">
+				<button type="submit" value="submit" id="submit" class="submitBtn">Submit</button>
+		</div>
+
+	</form>
+
+
+</body>
+</html>
